@@ -21,7 +21,6 @@ export class TextSelectionDirective {
 
   constructor(private _host: ElementRef, private _sanitizer: DomSanitizer) {}
 
-
   private _selectFilterValue(initialValue: string, filterValue: string): string {
     return initialValue.replace(new RegExp(filterValue, 'gi'), `<mark>${filterValue}</mark>`);
   }

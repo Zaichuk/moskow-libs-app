@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {LibraryInfo} from './open-moscow-data.model';
 
@@ -7,14 +7,13 @@ import {LibraryInfo} from './open-moscow-data.model';
   providedIn: 'root'
 })
 export class OpenMoscowDataService {
-  private readonly _URL = 'https://apidata.mos.ru/v1/datasets';
+  private readonly _URL = 'https://apidata.mos.ru';
 
-  constructor(private _http: HttpClient) {
-  }
+  constructor(private _http: HttpClient) {}
 
   getLibraryTable$(): Observable<LibraryInfo[]>  {
     const params = new HttpParams().set('api_key', 'da8ec520-338b-4989-b843-a3a5b3ea55b5');
 
-    return this._http.get<LibraryInfo[]>(`${this._URL}/526/rows`, {params})
+    return this._http.get<LibraryInfo[]>(`${this._URL}/v1/datasets/526/rows`, {params})
   }
 }

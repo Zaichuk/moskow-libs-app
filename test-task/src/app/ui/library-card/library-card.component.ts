@@ -10,8 +10,8 @@ import {LibraryInfo} from '../../store/open-moscow-data.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LibraryCardComponent {
+  expand = false;
 
   @Input()
   libraryInfo!: LibraryInfo;
-  expand = false;
 }
