@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  gap: 5px;
+}
+
+.library-info-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  border-radius: 4px;
+  border-spacing: 0;
+  border: solid black 1px;
+
+  &__cell {
+    text-align: center;
+    user-select: none;
+    border-right: 1px solid black;
+
+    &_last {
+      border-right: none;
+    }
+  }
+}

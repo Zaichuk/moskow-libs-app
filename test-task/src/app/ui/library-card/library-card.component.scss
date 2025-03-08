@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr;
+  width: 100%;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+
+.input-with-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,26 @@
+<img src="/assets/139825.jpg" alt="Красивое молочное ночное небо">
+
+<div class="input-container">
+  <label for="input-search"> Введите библиотеку</label>
+  <input id="input-search" #inputSearch>
+</div>
+
+<button (click)="getLibraries()" [disabled]="this.fullLibraryInfo.length === 0">Получить библиотеки</button>
+
+@if (filteredLibraryInfo$ | async; as librariesInfo) {
+  @if (librariesInfo.length) {
+    <table class="library-info-table">
+      @for (libraryInfo of librariesInfo; track libraryInfo.Number) {
+        <tr>
+          <app-library-card [libraryInfo]="libraryInfo">
+            <td class="library-info-table__cell"> {{ libraryInfo.Number }}</td>
+            <td class="library-info-table__cell" [appTextSelection]="inputSearch.value"
+                [initialValue]="libraryInfo.Cells.FullName"> {{ libraryInfo.Cells.FullName }}
+            </td>
+            <td class="library-info-table__cell library-info-table__cell_last"> {{ libraryInfo.Cells.WebSite }}</td>
+          </app-library-card>
+        </tr>
+      }
+    </table>
+  }
+}

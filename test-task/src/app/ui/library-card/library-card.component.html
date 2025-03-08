@@ -1,0 +1,39 @@
+<header class="card-header" (click)="expand = !expand">
+  <ng-content></ng-content>
+</header>
+
+@if (expand) {
+  <div class="card-body">
+    <div>
+      <label for="lib-number"> № </label>
+      <input id="lib-number" [value]="libraryInfo.Number" [disabled]="true">
+    </div>
+
+    <div>
+      <label for="lib-full-name"> Полное официальное наименование </label>
+      <input id="lib-full-name" class="input-with-overflow" [value]="libraryInfo.Cells.FullName" [disabled]="true"
+             [title]="libraryInfo.Cells.FullName">
+    </div>
+
+    <div>
+      <label for="lib-common-name"> Общепринятое наименование </label>
+      <input id="lib-common-name" class="input-with-overflow" [value]="libraryInfo.Cells.CommonName" [disabled]="true" [title]="libraryInfo.Cells.CommonName">
+    </div>
+
+    <div>
+      <label for="lib-chief-name"> ФИО руководителя </label>
+      <input id="lib-chief-name" class="input-with-overflow" [value]="libraryInfo.Cells.ChiefName" [disabled]="true"
+             [title]="libraryInfo.Cells.ChiefName">
+    </div>
+
+    <div>
+      <label for="lib-chief-position"> Должность руководителя </label>
+      <input id="lib-chief-position" [value]="libraryInfo.Cells.ChiefPosition" [disabled]="true">
+    </div>
+
+    <div>
+      <label for="lib-website"> Сайт </label>
+      <input id="lib-website" [value]="libraryInfo.Cells.WebSite" [disabled]="true">
+    </div>
+  </div>
+}
