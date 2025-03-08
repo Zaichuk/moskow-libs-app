@@ -9,8 +9,8 @@ import {
 } from '@angular/core';
 import {OpenMoscowDataService} from '../../store/open-moscow-data.service';
 import {LibraryInfo} from '../../store/open-moscow-data.model';
-import {BehaviorSubject, Observable, ReplaySubject, Subject, takeUntil} from 'rxjs';
-import {AsyncPipe, NgStyle} from '@angular/common';
+import {BehaviorSubject, Observable, ReplaySubject, takeUntil} from 'rxjs';
+import {AsyncPipe} from '@angular/common';
 import {LibraryCardComponent} from '../library-card/library-card.component';
 import {TextSelectionDirective} from '../../store/text-selection.directive';
 
